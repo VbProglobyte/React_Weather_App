@@ -15,10 +15,8 @@ const Conditions = (props) => {
                     <p><strong>{props.responseObj.name}</strong></p>
                     <p>It is currently <em><mark> {Math.round(props.responseObj.main.temp)} degrees</mark></em> out with {props.responseObj.weather[0].description}.</p>
                      
-                     <img alt="icon"
-                     src={`http://openweathermap.org/img/w/${props.icon}.png`}
-                     />
-                     
+                    <img src = {'http://openweathermap.org/img/wn/10d@2x.png'}/>
+
                 </div>
                 : null
                    }

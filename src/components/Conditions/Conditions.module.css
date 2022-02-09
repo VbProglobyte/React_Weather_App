@@ -27,13 +27,15 @@
 }
 mark {
   font-weight: bold;
-  background-color: #72edf2;
+  color: #5151e5;
+  background-color: white;
   padding: 4px;;
   border-radius: 5%;
 
 }
 mark:hover {
-  background-color: white;
+  color: white;
+  background-color: #5151e5;
   transform: translateX(-100%);
   transition: all 1s;
 }
