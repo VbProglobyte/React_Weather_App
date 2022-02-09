@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+
+:root {
+	--gradient: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+}
 .App {
-  text-align: center;
+  display:flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .App-logo {
@@ -14,14 +21,17 @@
 }
 
 .App-header {
+  background: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);;
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  box-shadow: 0 0 10px #282c34;
+
 }
 
 .App-link {
@@ -35,4 +45,25 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+main {
+  flex-grow: 1;
+  text-align: center;
+  padding: 25px;
+}
+footer {
+  color:aliceblue;
+  font-style: italic;
+  padding: 2px;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+  font-size: small;
+  text-align: center;
+}
+header {
+  padding: 25px;
 }
