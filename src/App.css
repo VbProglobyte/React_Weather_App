@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700,900&display=swap");
 
 :root {
-	--gradient: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);
+  --gradient: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
 }
 .App {
-  display:flex;
+  display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
@@ -21,7 +21,7 @@
 }
 
 .App-header {
-  background: linear-gradient( 135deg, #72EDF2 10%, #5151E5 100%);;
+  background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
   background-color: #282c34;
   min-height: 300px;
   display: flex;
@@ -31,7 +31,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
   box-shadow: 0 0 10px #282c34;
-
 }
 
 .App-link {
@@ -53,17 +52,24 @@ main {
   padding: 25px;
 }
 footer {
-  color:aliceblue;
+  color: aliceblue;
   font-style: italic;
   padding: 2px;
   min-height: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: rgb(0, 0, 0);
+  background: linear-gradient(135deg, #252235 10%, #000000 100%);
   font-size: small;
   text-align: center;
+  box-shadow: 0 0 10px #282c34;
 }
 header {
   padding: 25px;
+}
+.icon {
+  display: flex;
+  z-index: 1;
+  position: absolute;
+  opacity: 70%;
 }

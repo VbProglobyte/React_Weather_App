@@ -1,7 +1,8 @@
 // import React from 'react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Conditions from '../Conditions/Conditions';
 import classes from './Forecast.module.css';
+
 
 const Forecast = () => {
    // fetch API
@@ -11,14 +12,17 @@ const Forecast = () => {
    // const uriEncodedCity = encodeURIComponent(city);
    let [error, setError] = useState(false);
    let [loading, setLoading] = useState(false);
+   
 
    function getForecast(e) {
+      
       //prevent default 
       e.preventDefault();
 
       if (city.length === 0) {
          return setError(true);
       }
+      
       // Clear state in preparation for new data
       setError(false);
       setResponseObj({});
@@ -48,8 +52,12 @@ const Forecast = () => {
             setLoading(false);
             console.log(err.message);
          });
-
+         // const {icon} = data.weather[0];
+         // document.querySelector(".icon").src ="https://openweathermap.org/img/wn/" + icon + "@2x.png"; 
    }
+
+   
+   
    //JSX code
    return (
       <div>
@@ -89,7 +97,9 @@ const Forecast = () => {
               responseObj={responseObj}
               error={error} //new
               loading={loading} //new
+       
               />
+            
       </div>
    )
 }

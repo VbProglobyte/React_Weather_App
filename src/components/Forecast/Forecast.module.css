@@ -1,64 +1,115 @@
 .TextInput {
-    font-size: large;
-    border: 1px solid #EEEEEE;
-    padding: 5px;
-    border-radius: 3px;
-    display: block;
-    margin: 5px auto;
+  font-size: large;
+  border: 1px solid #eeeeee;
+  padding: 5px;
+  border-radius: 3px;
+  display: block;
+  margin: 5px auto;
 }
 
 .TextInput:focus {
-    outline: none;
-    border-color: #719ECE;
-    box-shadow: 0 0 10px #5151E5;
+  outline: none;
+  border-color: #719ece;
+  box-shadow: 0 0 10px #5151e5;
 }
 
 .Radio {
-    font-size: small;
-    
+  font-size: small;
+  font: inherit;
+  /* color: #5151e5; */
+  width: 1.15em;
+  height: 1.15em;
+  /* border-color: #5151e5; */
+  padding: 5px;
+  /* border: 0.15em solid currentColor;
+  border-radius: 50%; */
+}
+
+input[type="radio"] {
+  /* Add if not using autoprefixer */
+  -webkit-appearance: none;
+  /* Remove most all native input styles */
+  appearance: none;
+  /* For iOS < 15 */
+  /* background-color:#5151e5; */
+  /* Not removed via appearance */
+  /* margin: 0; */
+  font: inherit;
+  color: currentColor;
+  width: 1em;
+  height: 1em;
+  border: 0.15em solid currentColor;
+  border-radius: 50%;
+  /* transform: translateY(-0.075em); */
+
+  /* display: grid; */
+  /* place-content: center; */
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: 0 0 10px #5151e5;
+  /* Windows High Contrast Mode */
+  background-color: CanvasText;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+  transform: translateX(0);
+}
+
+input[type="radio"]:focus {
+  /* outline: max(2px, 0.15em) solid currentColor;
+    outline-offset: max(2px, 0.15em); */
+  background-color: #5151e5;
 }
 
 .Button {
-    display: block;
-    margin: 10px auto;
-    padding: .8rem;
-    font-size: 1em;
-    font-family: sans-serif;
-    text-decoration: none;
-    /* background: rgb(0, 110, 255); */
-    border-radius: 5px;
-    /* color: white; */
-    cursor: pointer;
-    /* margin: 5px auto; */
-    /* border: none; */
-    transition: all 1s;
-    overflow: hidden;
-    position: relative;
-    color: #5151E5;  
-    border: 3px solid #5151E5;
+  display: block;
+  margin: 10px auto;
+  padding: 0.8rem;
+  font-size: 1em;
+  font-family: sans-serif;
+  text-decoration: none;
+  /* background: rgb(0, 110, 255); */
+  border-radius: 5px;
+  /* color: white; */
+  cursor: pointer;
+  /* margin: 5px auto; */
+  /* border: none; */
+  transition: all 1s;
+  overflow: hidden;
+  position: relative;
+  color: #5151e5;
+  border: 3px solid #5151e5;
 }
 
-  .Button:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color:#5151E5;
-    z-index: -1;
-    transform: translateX(-100%);
-    transition: all 1s;
-  }
-  
-  .Button:hover:before {
-    transform: translateX(0);
-  }
-  
-  .Button:hover {
-    color: white;
-    border: 3px solid white;
-    z-index: 1;
-  }
+.Button:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #5151e5;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
 
-  /*  */
+.Button:hover:before {
+  transform: translateX(0);
+}
+
+.Button:hover {
+  color: white;
+  border: 3px solid white;
+  z-index: 1;
+}
+
+/*  */

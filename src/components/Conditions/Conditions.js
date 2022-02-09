@@ -1,7 +1,9 @@
 import React from 'react';
 import classes from './Conditions.module.css';
 
+
 const Conditions = (props) => {
+    
     return (
 
         <div className={classes.Wrapper}>
@@ -14,7 +16,8 @@ const Conditions = (props) => {
                     <p>It is currently {Math.round(props.responseObj.main.temp)} degrees out with {props.responseObj.weather[0].description}.</p>
                 </div>
                 : null
-            }
+                   }
+                   
         </div>
     )
 }
