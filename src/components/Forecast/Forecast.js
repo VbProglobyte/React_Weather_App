@@ -1,5 +1,5 @@
 // import React from 'react';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import Conditions from '../Conditions/Conditions';
 import classes from './Forecast.module.css';
 
@@ -98,6 +98,7 @@ const Forecast = () => {
               error={error} //new
               loading={loading} //new
        
+
               />
             
       </div>
