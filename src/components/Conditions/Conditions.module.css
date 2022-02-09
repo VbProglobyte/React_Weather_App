@@ -25,3 +25,15 @@
     transform: rotate(360deg);
   }
 }
+mark {
+  font-weight: bold;
+  background-color: #72edf2;
+  padding: 4px;;
+  border-radius: 5%;
+
+}
+mark:hover {
+  background-color: white;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
