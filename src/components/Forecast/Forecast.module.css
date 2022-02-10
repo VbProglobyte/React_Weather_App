@@ -16,13 +16,10 @@
 .Radio {
   font-size: small;
   font: inherit;
-  /* color: #5151e5; */
   width: 1.15em;
   height: 1.15em;
-  /* border-color: #5151e5; */
   padding: 5px;
-  /* border: 0.15em solid currentColor;
-  border-radius: 50%; */
+
 }
 
 input[type="radio"] {
@@ -30,20 +27,13 @@ input[type="radio"] {
   -webkit-appearance: none;
   /* Remove most all native input styles */
   appearance: none;
-  /* For iOS < 15 */
-  /* background-color:#5151e5; */
-  /* Not removed via appearance */
-  /* margin: 0; */
   font: inherit;
   color: currentColor;
   width: 1em;
   height: 1em;
   border: 0.15em solid currentColor;
   border-radius: 50%;
-  /* transform: translateY(-0.075em); */
 
-  /* display: grid; */
-  /* place-content: center; */
 }
 
 input[type="radio"]::before {
@@ -64,8 +54,7 @@ input[type="radio"]:checked::before {
 }
 
 input[type="radio"]:focus {
-  /* outline: max(2px, 0.15em) solid currentColor;
-    outline-offset: max(2px, 0.15em); */
+  border: white;
   background-color: #5151e5;
 }
 
@@ -76,12 +65,8 @@ input[type="radio"]:focus {
   font-size: 1em;
   font-family: sans-serif;
   text-decoration: none;
-  /* background: rgb(0, 110, 255); */
   border-radius: 5px;
-  /* color: white; */
   cursor: pointer;
-  /* margin: 5px auto; */
-  /* border: none; */
   transition: all 1s;
   overflow: hidden;
   position: relative;

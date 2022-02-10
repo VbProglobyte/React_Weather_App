@@ -3,7 +3,7 @@ import classes from './Conditions.module.css';
 
 
 const Conditions = (props) => {
-    
+
     return (
 
         <div className={classes.Wrapper}>
@@ -13,16 +13,17 @@ const Conditions = (props) => {
             {props.responseObj.cod === 200 ?
                 <div>
                     <p><strong>{props.responseObj.name}</strong></p>
-                    <p>It is currently <em><mark> {Math.round(props.responseObj.main.temp)} degrees</mark></em> out with {props.responseObj.weather[0].description}.</p>
-                     
-                    <img src = {'http://openweathermap.org/img/wn/10d@2x.png'}/>
+                    <p>It is currently <em><mark> {Math.round(props.responseObj.main.temp)} &deg;</mark></em> out with {props.responseObj.weather[0].description}.</p>
+
 
                 </div>
                 : null
-                   }
-                   
+            }
+
+           
         </div>
     )
+
 }
 
 export default Conditions;

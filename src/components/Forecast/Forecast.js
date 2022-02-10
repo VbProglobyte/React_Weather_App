@@ -9,20 +9,21 @@ const Forecast = () => {
    let [city, setCity] = useState('');
    let [unit, setUnit] = useState('imperial');
    let [responseObj, setResponseObj] = useState({});
-   // const uriEncodedCity = encodeURIComponent(city);
+   
    let [error, setError] = useState(false);
    let [loading, setLoading] = useState(false);
+   // const [apiData] = useState({});
    
-
+   
    function getForecast(e) {
-      
+
       //prevent default 
       e.preventDefault();
 
       if (city.length === 0) {
          return setError(true);
       }
-      
+
       // Clear state in preparation for new data
       setError(false);
       setResponseObj({});
@@ -52,12 +53,12 @@ const Forecast = () => {
             setLoading(false);
             console.log(err.message);
          });
-         // const {icon} = data.weather[0];
-         // document.querySelector(".icon").src ="https://openweathermap.org/img/wn/" + icon + "@2x.png"; 
+      // const {icon} = data.weather[0];
+      // document.querySelector(".icon").src ="https://openweathermap.org/img/wn/" + icon + "@2x.png"; 
    }
 
-   
-   
+
+
    //JSX code
    return (
       <div>
@@ -93,14 +94,13 @@ const Forecast = () => {
             </label>
             <button className={classes.Button} type="submit">Get Forecast</button>
          </form>
+         
          <Conditions
-              responseObj={responseObj}
-              error={error} //new
-              loading={loading} //new
-       
+            responseObj={responseObj}
+            error={error} //new
+            loading={loading} //new
+         />
 
-              />
-            
       </div>
    )
 }

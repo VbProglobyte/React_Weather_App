@@ -21,7 +21,7 @@
 }
 
 .App-header {
-  background: linear-gradient(135deg, #72edf2 10%, #5151e5 100%);
+  background: linear-gradient(135deg, #000000 10%, #5151e5 100%);
   background-color: #282c34;
   min-height: 300px;
   display: flex;
@@ -50,6 +50,7 @@ main {
   flex-grow: 1;
   text-align: center;
   padding: 25px;
+  
 }
 footer {
   color: aliceblue;
@@ -67,9 +68,7 @@ footer {
 header {
   padding: 25px;
 }
-.icon {
+i {
   display: flex;
-  z-index: 1;
-  position: absolute;
-  opacity: 70%;
+
 }
